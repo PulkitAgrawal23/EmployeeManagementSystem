@@ -1,7 +1,3 @@
-Here is a basic README file for your Employee Management System project based on the details you've provided:
-
----
-
 # Employee Management System
 
 This is a full-stack application that allows you to manage employee details and projects. It consists of a backend built using Spring Boot and a frontend developed using Angular. The application also uses MySQL as the database to store employee and project data.
@@ -100,7 +96,3 @@ USE employeemanagementsystem;
 3. Commit your changes (`git commit -am 'Add new feature'`).
 4. Push to the branch (`git push origin feature/your-feature`).
 5. Open a pull request.
-
----
-
-Feel free to modify this as needed based on your project details!
