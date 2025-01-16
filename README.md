@@ -36,7 +36,7 @@ This is a full-stack application that allows you to manage employee details and 
    ```
 2. Navigate to the backend directory:
    ```bash
-   cd EmployeeManagementSystem/backend
+   cd EmployeeManagementSystem/emp-management
    ```
 3. Open `application.properties` and ensure the following configuration is correct:
    ```properties
@@ -57,7 +57,7 @@ This is a full-stack application that allows you to manage employee details and 
 
 1. Navigate to the frontend directory:
    ```bash
-   cd EmployeeManagementSystem/frontend
+   cd EmployeeManagementSystem/emp-management-frontend
    ```
 2. Install the required npm packages:
    ```bash
@@ -76,18 +76,39 @@ This is a full-stack application that allows you to manage employee details and 
 
 You can now interact with the Employee Management System through the frontend interface.
 
-## Database Setup
+### **Database Setup**
 
-1. Create a MySQL database named `employeemanagementsystem`.
-2. Import the SQL file (`database.sql`) located in the project directory to create the necessary tables for the backend.
+Before running the application, you need to create a database for the application to connect to. The schema and tables will be created automatically by Spring Boot at runtime.
 
-### Example SQL Command to Run:
-```sql
-CREATE DATABASE employeemanagementsystem;
-USE employeemanagementsystem;
+- **Create a Database**: Create a database in MySQL (or your preferred database) with the name of your choice (e.g., `employeemanagementsystem`).
+  - Example SQL to create a database:
+    ```sql
+    CREATE DATABASE employeemanagementsystem;
+    ```
 
--- Paste the content of the database.sql here
-```
+- **Automatic Table Creation**: Spring Boot will automatically create the necessary tables based on the entity classes at runtime. No need to import or run any SQL file manually unless you want to insert initial data or define your schema.
+
+- **Importing Data (Optional)**: If you want to insert sample data, you can use the `EmployeeManagementSystem.sql` file. Just place it in the `src/main/resources/` directory, and Spring Boot will run it on startup to populate your database.
+
+  Example `EmployeeManagementSystem.sql`:
+  ```sql
+  -- Create tables if necessary (not required with auto table creation)
+  CREATE TABLE IF NOT EXISTS employee (
+      id BIGINT AUTO_INCREMENT PRIMARY KEY,
+      firstname VARCHAR(100),
+      lastname VARCHAR(100),
+      mobile VARCHAR(15),
+      email VARCHAR(100)
+  );
+
+  -- Insert sample data
+  INSERT INTO employee (firstname, lastname, mobile, email) 
+  VALUES ('John', 'Doe', '1234567890', 'john.doe@example.com');
+  ```
+
+With this setup, you only need to create the database manually. The application will take care of creating the tables and populating them (if you have an SQL file) at runtime.
+
+--- 
 
 ## Contributing
 
