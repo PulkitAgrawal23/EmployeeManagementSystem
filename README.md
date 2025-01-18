@@ -110,7 +110,7 @@ With this setup, you only need to create the database manually. The application 
 
 --- 
 
-## Images
+## Screenshots
 
 ### Add Employee
 ![Add Employee](emp-management-frontend/src/assets/add_employee.png)
