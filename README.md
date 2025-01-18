@@ -110,6 +110,21 @@ With this setup, you only need to create the database manually. The application 
 
 --- 
 
+## Images
+
+### Add Employee
+![Add Employee](EmployeeManagementSystem/emp-management-frontend/src/assets/add_employee.png)
+
+### Add Project
+![Add Project](EmployeeManagementSystem/emp-management-frontend/src/assets/add_project.png)
+
+### Employee List
+![Employee List](EmployeeManagementSystem/emp-management-frontend/src/assets/employee_list.png)
+
+### Project List
+![Project List](EmployeeManagementSystem/emp-management-frontend/src/assets/project_list.png)
+
+---
 ## Contributing
 
 1. Fork this repository.
